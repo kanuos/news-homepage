@@ -23,30 +23,69 @@
     />
     <!-- link to tailwind output -->
     <link rel="stylesheet" href="./style.css" />
+
+    <!-- external JS -->
+    <script src="./script.js" defer></script>
   </head>
-  <body class="bg-off-white">
+  <body class="bg-off-white h-auto min-h-screen container">
     <!-- page navigation -->
-    <nav class="p-6 flex items-center justify-between">
+    <nav class="p-6 flex items-center justify-between md:items-end">
       <img
         src="./images/logo.svg"
         alt="Brand Logo"
         class="object-fit block w-10"
       />
-      <section id="navMenu" class="hidden">
-        <ul>
-          <li>Home</li>
-          <li>New</li>
-          <li>Popular</li>
-          <li>Trending</li>
-          <li>Categories</li>
-        </ul>
+      <section
+        id="navMenu"
+        class="fixed top-0 h-screen right-0 w-screen bg-very-dark-blue bg-opacity-70 z-10 translate-x-full transition-transform md:translate-x-0 md:relative md:h-fit md:bg-off-white"
+      >
+        <button id="closeBtn" class="absolute top-6 right-6 z-20 md:hidden">
+          <img
+            src="./images/icon-menu-close.svg"
+            alt="Close nav menu button"
+            class="block object-contain h-8 w-8"
+          />
+        </button>
+        <section
+          class="w-72 bg-off-white ml-auto pl-8 pt-40 h-full md:w-auto md:ml-0 md:pl-0 md:pt-0"
+        >
+          <ul
+            class="w-full ml-auto z-10 h-auto flex flex-col justify-center items-start md:items-center md:justify-end gap-6 md:flex-row"
+          >
+            <li
+              class="cursor-pointer text-lg md:text-xs md:text-dark-grayish-blue text-very-dark-blue hover:text-soft-orange transition-all"
+            >
+              Home
+            </li>
+            <li
+              class="cursor-pointer text-lg md:text-xs md:text-dark-grayish-blue text-very-dark-blue hover:text-soft-orange transition-all"
+            >
+              New
+            </li>
+            <li
+              class="cursor-pointer text-lg md:text-xs md:text-dark-grayish-blue text-very-dark-blue hover:text-soft-orange transition-all"
+            >
+              Popular
+            </li>
+            <li
+              class="cursor-pointer text-lg md:text-xs md:text-dark-grayish-blue text-very-dark-blue hover:text-soft-orange transition-all"
+            >
+              Trending
+            </li>
+            <li
+              class="cursor-pointer text-lg md:text-xs md:text-dark-grayish-blue text-very-dark-blue hover:text-soft-orange transition-all"
+            >
+              Categories
+            </li>
+          </ul>
+        </section>
       </section>
-      <button>
+      <button id="openBtn" class="md:hidden">
         <img src="./images/icon-menu.svg" alt="Toggler icon" class="w-10" />
       </button>
     </nav>
 
-    <section class="container px-6 text-very-dark-blue grid gap-12 mb-20">
+    <section class="px-6 text-very-dark-blue grid gap-12 mb-20">
       <!-- header -->
       <header class="flex flex-col gap-6">
         <img
@@ -61,7 +100,7 @@
           really fulfilling its promise?
         </p>
         <button
-          class="outline-none py-2.5 px-8 bg-soft-red w-max uppercase font-bold tracking-wider text-off-white"
+          class="outline-none py-2.5 px-8 bg-soft-red hover:bg-very-dark-blue transition-colors w-max uppercase font-bold tracking-wider text-off-white"
         >
           read more
         </button>
