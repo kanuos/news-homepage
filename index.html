@@ -27,9 +27,13 @@
     <!-- external JS -->
     <script src="./script.js" defer></script>
   </head>
-  <body class="bg-off-white h-auto min-h-screen container">
+  <body
+    class="bg-off-white w-full overflow-x-hidden h-auto min-h-screen max-w-6xl mx-auto lg:grid lg:grid-cols-6 lg:grid-flow-row"
+  >
     <!-- page navigation -->
-    <nav class="p-6 flex items-center justify-between md:items-end">
+    <nav
+      class="p-6 flex items-center justify-between md:items-end lg:items-start bg-off-white transition-all md:drop-shadow-none lg:sticky lg:col-start-1 lg:col-end-7 lg:row-start-1 lg:row-end-2"
+    >
       <img
         src="./images/logo.svg"
         alt="Brand Logo"
@@ -85,112 +89,168 @@
       </button>
     </nav>
 
-    <section class="px-6 text-very-dark-blue grid gap-12 mb-20">
+    <section
+      class="px-6 text-very-dark-blue grid gap-12 md:gap-y-20 md:gap-x-8 mb-20 md:grid-cols-2 lg:col-start-1 lg:col-end-7 lg:row-start-2 lg:row-end-auto lg:grid-cols-3 lg:gap-x-4 lg:gap-y-16"
+    >
       <!-- header -->
-      <header class="flex flex-col gap-6">
+      <header
+        class="flex flex-col gap-6 md:col-span-full lg:col-start-1 lg:col-end-3"
+      >
         <img
+          srcset="
+            ./images/image-web-3-desktop.jpg 1024w,
+            ./images/image-web-3-mobile.jpg   768w
+          "
           src="./images/image-web-3-mobile.jpg"
           alt="Web 3.0 image"
-          class="block object-cover"
+          class="block object-cover w-full"
         />
-        <h1 class="text-5xl font-extrabold">The Bright Future of Web 3.0?</h1>
-        <p class="text-dark-grayish-blue leading-relaxed">
-          We dive into the next evolution of the web that claims to put the
-          power of the platforms back into the hands of the people. But is it
-          really fulfilling its promise?
-        </p>
-        <button
-          class="outline-none py-2.5 px-8 bg-soft-red hover:bg-very-dark-blue transition-colors w-max uppercase font-bold tracking-wider text-off-white"
+        <section
+          class="flex flex-col w-full lg:grid gap-6 lg:gap-x-7 lg:grid-cols-2"
         >
-          read more
-        </button>
+          <h1 class="text-5xl font-extrabold lg:col-start-1 lg:col-end-2">
+            The Bright Future of Web 3.0?
+          </h1>
+          <section class="flex flex-col items-start justify-start gap-6">
+            <p
+              class="text-dark-grayish-blue leading-relaxed lg:col-start-2 lg:col-end-3 lg:text-sm"
+            >
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <button
+              class="outline-none py-2.5 px-8 rounded-sm hover:-translate-y-0.5 hover:scale-105 hover:drop-shadow-lg bg-soft-red hover:bg-very-dark-blue transition-all ease-linear w-max uppercase text-xs font-bold tracking-wider text-off-white lg:col-start-2 lg:col-end-3"
+            >
+              read more
+            </button>
+          </section>
+        </section>
       </header>
 
       <!-- sidebar -->
-      <aside class="bg-very-dark-blue h-auto p-6">
-        <h2 class="text-soft-orange font-bold text-4xl">New</h2>
+      <aside
+        class="bg-very-dark-blue h-auto p-6 md:col-start-2 md:col-end-3 md:row-start-2 lg:col-start-3 lg:col-end-4 lg:row-start-1 max-w-sm mx-auto md:mr-0 lg:m-0 lg:max-w-none"
+      >
+        <h2 class="text-soft-orange font-bold text-4xl lg:text-2xl">New</h2>
 
         <section class="py-8 border-b border-dark-grayish-blue">
-          <h3 class="font-bold text-off-white text-xl">
+          <h3
+            class="font-bold text-off-white text-xl lg:text-sm hover:text-soft-orange transition-all cursor-pointer peer"
+          >
             Hydrogen VS Electric Cars
           </h3>
-          <p class="mt-2 text-dark-grayish-blue">
+          <p
+            class="mt-2 text-dark-grayish-blue peer-hover:text-grayish-blue transition-all ease-in lg:text-xs"
+          >
             Will hydrogen-fueled cars ever catch up to EVs?
           </p>
         </section>
 
         <section class="py-8 border-b border-dark-grayish-blue">
-          <h3 class="font-bold text-off-white text-xl">
+          <h3
+            class="font-bold text-off-white text-xl lg:text-sm hover:text-soft-orange transition-all cursor-pointer peer"
+          >
             The Downsides of AI Artistry
           </h3>
-          <p class="mt-2 text-dark-grayish-blue">
+          <p
+            class="mt-2 text-dark-grayish-blue peer-hover:text-grayish-blue transition-all ease-in lg:text-xs"
+          >
             What are the possible adverse effects of on-demand AI image
             generation?
           </p>
         </section>
 
-        <section class="py-8">
-          <h3 class="font-bold text-off-white text-xl">
+        <section class="pt-8 pb-3">
+          <h3
+            class="font-bold text-off-white text-xl lg:text-sm hover:text-soft-orange transition-all cursor-pointer peer"
+          >
             Is VC Funding Drying Up?
           </h3>
-          <p class="mt-2 text-dark-grayish-blue">
+          <p
+            class="mt-2 text-dark-grayish-blue peer-hover:text-grayish-blue transition-all ease-in lg:text-xs"
+          >
             Private funding by VC firms is down 50% YOY. We take a look at what
             that means.
           </p>
         </section>
       </aside>
 
-      <main class="flex flex-col gap-8">
+      <main
+        class="flex flex-col gap-8 md:col-start-1 md:col-end-2 md:row-start-2 lg:col-start-1 lg:col-end-4 lg:grid lg:grid-cols-3"
+      >
         <!-- card 1 -->
-        <section class="flex gap-8">
-          <img src="./images/image-retro-pcs.jpg" alt="Retro PC" class="h-32" />
+        <section
+          class="flex gap-8 group h-32 md:h-44 md:gap-x-4 overflow-hidden"
+        >
+          <img
+            src="./images/image-retro-pcs.jpg"
+            alt="Retro PC"
+            class="h-full block object-contain"
+          />
           <section class="flex flex-col gap-2">
-            <span class="font-bold text-3xl tracking-tighter text-grayish-blue">
+            <span
+              class="font-bold text-3xl lg:text-2xl tracking-tighter text-grayish-blue"
+            >
               01
             </span>
-            <h2 class="font-extrabold text-lg text-very-dark-blue">
+            <h2
+              class="font-extrabold text-lg lg:text-base text-very-dark-blue group-hover:text-soft-red transition-all cursor-pointer"
+            >
               Reviving Retro PCs
             </h2>
-            <p class="text-dark-grayish-blue">
+            <p class="text-dark-grayish-blue lg:text-sm">
               What happens when old PCs are given modern upgrades?
             </p>
           </section>
         </section>
         <!-- card 2 -->
-        <section class="flex gap-8">
+        <section
+          class="flex gap-8 group h-32 md:h-44 md:gap-x-4 overflow-hidden"
+        >
           <img
             src="./images/image-top-laptops.jpg"
             alt="Laptop key"
-            class="h-32"
+            class="h-full block object-contain"
           />
           <section class="flex flex-col gap-2">
-            <span class="font-bold text-3xl tracking-tighter text-grayish-blue">
+            <span
+              class="font-bold text-3xl lg:text-2xl tracking-tighter text-grayish-blue"
+            >
               02
             </span>
-            <h2 class="font-extrabold text-lg text-very-dark-blue">
+            <h2
+              class="font-extrabold text-lg lg:text-base text-very-dark-blue group-hover:text-soft-red transition-all cursor-pointer"
+            >
               Top 10 Laptops of 2022
             </h2>
-            <p class="text-dark-grayish-blue">
+            <p class="text-dark-grayish-blue lg:text-sm">
               Our best picks for various needs and budgets.
             </p>
           </section>
         </section>
 
         <!-- card 3 -->
-        <section class="flex gap-8">
+        <section
+          class="flex gap-8 group h-32 md:h-44 md:gap-x-4 overflow-hidden"
+        >
           <img
             src="./images/image-gaming-growth.jpg"
             alt="Gamepad"
-            class="h-32"
+            class="h-full block object-contain"
           />
           <section class="flex flex-col gap-2">
-            <span class="font-bold text-3xl tracking-tighter text-grayish-blue">
+            <span
+              class="font-bold text-3xl lg:text-2xl tracking-tighter text-grayish-blue"
+            >
               03
             </span>
-            <h2 class="font-extrabold text-lg text-very-dark-blue">
+            <h2
+              class="font-extrabold text-lg lg:text-base text-very-dark-blue group-hover:text-soft-red transition-all cursor-pointer"
+            >
               The Growth of Gaming
             </h2>
-            <p class="text-dark-grayish-blue">
+            <p class="text-dark-grayish-blue lg:text-sm">
               How the pandemic has sparked fresh opportunities.
             </p>
           </section>

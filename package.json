@@ -4,7 +4,8 @@
   "description": "![Design preview for the News homepage coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tailwindcss -i ./dev/input.css -o ./style.css --watch"
+    "dev": "npx tailwindcss -i ./dev/input.css -o ./style.css --watch",
+    "build" : "npx tailwindcss -o ./style.css --minify"
   },
   "keywords": [],
   "author": "",
