@@ -30,10 +30,15 @@ function toggleNavMenu() {
  * on scrolling down
  */
 function toggleNavBarVisibility() {
+  // prevent running this function if device width is less than the size of tablet (768px)
+  const { scrollY, innerWidth } = window;
+  const isNavMenuOpen = !navMenu.classList.contains("translate-x-full");
+  if (innerWidth < 768 && isNavMenuOpen) {
+    return;
+  }
   // variable to detect whether user scrolled down or up the page
-  const scrollDirection =
-    currentScrollDistance > window.scrollY ? "up" : "down";
-  currentScrollDistance = window.scrollY;
+  const scrollDirection = currentScrollDistance > scrollY ? "up" : "down";
+  currentScrollDistance = scrollY;
 
   if (scrollDirection === "down" || currentScrollDistance === 0) {
     navBar?.classList.remove(...navbarClasses);
